@@ -1,13 +1,416 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hassan Bhai // The Unrivaled Dossier</title>
+  
+  <!-- Tailwind CSS via Next-Gen Browser CDN (v4) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    body { 
+      background-color: #0A0A0A; 
+      color: white; 
+      font-family: 'Inter', sans-serif; 
+      margin: 0; 
+      overflow-x: hidden;
+    }
+    .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    
+    /* Scrollbar Styling for Editorial Look */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0A0A0A; }
+    ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.4); }
 
+    /* Animations */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
+  </style>
+</head>
+<body class="p-6 md:p-8 flex flex-col min-h-screen selection:bg-orange-500/30">
+
+  <!-- Header -->
+  <header class="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-end border-b border-white/20 pb-4 mb-8 relative z-10 w-full max-w-7xl mx-auto">
+    <div class="flex flex-col">
+      <span class="text-[10px] tracking-[0.3em] text-white/50 uppercase font-semibold">Dossier_Archive</span>
+      <span class="text-xs font-mono mt-1 text-orange-500">STATUS: UNRIVALED_LEADERSHIP</span>
+    </div>
+    <div class="text-left sm:text-right">
+      <span class="text-xs font-mono uppercase bg-white/10 px-2 py-1">Hassan Bhai // The One and Only</span>
+    </div>
+  </header>
+
+  <main class="w-full max-w-7xl mx-auto flex-1">
+    
+    <!-- Hero Section -->
+    <section class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
+      <div class="col-span-1 md:col-span-8 flex flex-col justify-between">
+        <div class="relative w-fit animate-fade-in">
+          <h1 class="text-[64px] sm:text-[80px] md:text-[140px] leading-[0.85] font-black tracking-tighter uppercase italic text-white flex flex-col">
+            <span>Hassan</span>
+            <span class="text-transparent" style="-webkit-text-stroke: 2px white; text-stroke: 2px white;">Bhai</span>
+          </h1>
+          <div class="absolute -bottom-4 left-1 bg-orange-500 text-black px-4 py-1 text-xs sm:text-sm font-bold skew-x-[-12deg] shadow-lg">
+            1,000,000 REASONS OF EXCELLENCE
+          </div>
+        </div>
+      </div>
+
+      <!-- Status Panel -->
+      <div class="col-span-1 md:col-span-4 border-l-0 md:border-l border-white/20 md:pl-8 flex flex-col pt-12 md:pt-0">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
+          <span class="text-[10px] uppercase font-bold tracking-widest text-white/50">System Metrics</span>
+        </div>
+        
+        <div class="flex flex-col gap-3 mb-8 mt-auto">
+          <div class="flex justify-between text-xs font-mono border-b border-white/10 pb-2">
+            <span class="text-white/60">EXCELLENCE_COUNT</span>
+            <span class="text-orange-500 font-bold tracking-widest text-sm" id="main-counter">0</span>
+          </div>
+          <div class="flex justify-between text-xs font-mono border-b border-white/10 pb-2">
+            <span class="text-white/60">CRITICAL_THINKING</span>
+            <span>99.9%</span>
+          </div>
+          <div class="flex justify-between text-xs font-mono border-b border-white/10 pb-2">
+            <span class="text-white/60">TECHNICAL_PROWESS</span>
+            <span class="bg-orange-500/20 text-orange-400 px-1">GOLD_STANDARD</span>
+          </div>
+        </div>
+        
+        <div class="p-4 border border-white/20 bg-white/5 relative overflow-hidden group hover:bg-white/10 transition-colors">
+          <div class="absolute inset-0 bg-gradient-to-r from-orange-500/0 via-orange-500/5 to-orange-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+          <span class="text-[10px] block uppercase text-white/40 mb-2 font-mono">Latest Achievement</span>
+          <p class="text-sm font-medium leading-snug underline underline-offset-4 decoration-orange-500">Successfully optimized the workflow of everyone.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="mb-24 mt-16 pt-8 border-t border-white/20">
+      <div class="flex items-center gap-2 mb-8">
+        <i data-lucide="star" class="w-4 h-4 text-orange-500"></i>
+        <h2 class="text-sm font-mono uppercase tracking-widest text-white/70">Featured_Excellence_Vectors</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="featured-categories">
+        <!-- Injected by JS -->
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="mb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 border-t border-white/20 pt-16">
+      <div class="lg:col-span-4 lg:sticky lg:top-8 self-start">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="message-square" class="w-4 h-4 text-orange-500"></i>
+          <h2 class="text-sm font-mono uppercase tracking-widest text-white/70">Peer_Testimonials</h2>
+        </div>
+        <p class="text-sm text-white/50 mb-8 max-w-sm leading-relaxed">
+          Records from those who have witnessed the excellence firsthand. Contribute a testimony to the global archive.
+        </p>
+        
+        <form id="testimonial-form" class="flex flex-col gap-5 p-6 border border-white/20 bg-neutral-950 shadow-2xl relative">
+          <div class="absolute top-0 right-0 p-2 opacity-10">
+            <i data-lucide="quote" class="w-12 h-12"></i>
+          </div>
+          <div class="flex flex-col gap-2 relative z-10">
+            <label class="text-[10px] font-mono uppercase text-white/60 tracking-wider">Observer ID / Name</label>
+            <input 
+              type="text" id="t-author"
+              class="bg-black border border-white/20 p-2.5 text-sm text-white focus:outline-none focus:border-orange-500 font-mono transition-colors" 
+              placeholder="Enter your name" required />
+          </div>
+          <div class="flex flex-col gap-2 relative z-10">
+            <label class="text-[10px] font-mono uppercase text-white/60 tracking-wider">Testimony</label>
+            <textarea 
+              id="t-content"
+              class="bg-black border border-white/20 p-2.5 text-sm text-white focus:outline-none focus:border-orange-500 font-sans resize-none h-28 transition-colors"
+              placeholder="Describe your encounter..." required></textarea>
+          </div>
+          <button type="submit" class="mt-2 bg-white/5 hover:bg-orange-500 hover:text-black transition-all duration-300 border border-white/20 text-xs font-mono uppercase py-3 font-bold tracking-widest text-center cursor-pointer relative z-10 hover:border-orange-500">
+            Submit Record
+          </button>
+        </form>
+      </div>
+      
+      <div class="lg:col-span-8 flex flex-col gap-4" id="testimonials-list">
+        <!-- Injected by JS -->
+      </div>
+    </section>
+
+    <!-- Endless Archive System -->
+    <section class="flex-1 border-t border-white/20 pt-16 pb-24">
+      <div class="flex sm:flex-row flex-col sm:items-center justify-between mb-8 pb-4 gap-4">
+        <div class="flex items-center gap-2">
+          <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.6)]"></div>
+          <h2 class="text-sm font-mono uppercase tracking-widest text-white/80">The_Endless_Archive</h2>
+        </div>
+        <span class="text-[10px] font-mono text-white/40 bg-white/5 px-2 py-1 border border-white/10">SCROLL DOWN TO LOAD</span>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="archive-grid">
+        <!-- Injected by JS via IntersectionObserver -->
+      </div>
+
+      <!-- Loading Trigger -->
+      <div id="loader" class="py-24 flex justify-center items-center">
+        <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center relative">
+          <div class="w-3 h-3 bg-orange-500 rounded-full animate-ping absolute"></div>
+          <div class="w-2 h-2 bg-orange-500 rounded-full relative z-10"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-8 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.4em] uppercase text-white/30 gap-6">
+      <span>Verified by History</span>
+      <div class="flex gap-4 md:gap-8 flex-wrap justify-center text-center">
+        <span>Commit History: Clean</span>
+        <span class="hidden md:inline">Future: Bright</span>
+        <span>Legacy: Eternal</span>
+      </div>
+      <span>© 2026 Ultimate Dossier</span>
+    </footer>
+
+  </main>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // 1. NUMBER COUNTER ANIMATION
+    const counterEl = document.getElementById('main-counter');
+    let startTimestamp = null;
+    const durationMs = 3000;
+    const targetCount = 1000000;
+
+    function step(timestamp) {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / durationMs, 1);
+      const easeOutQuad = progress * (2 - progress); 
+      counterEl.textContent = Math.floor(easeOutQuad * targetCount).toLocaleString();
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        counterEl.textContent = targetCount.toLocaleString();
+      }
+    }
+    window.requestAnimationFrame(step);
+
+
+    // 2. GLOBAL UPVOTE MECHANIC
+    const upvotes = {};
+    window.handleUpvote = function(id, btnElement) {
+      upvotes[id] = (upvotes[id] || 0) + 1;
+      const baseVotes = parseInt(btnElement.getAttribute('data-base-votes'), 10);
+      
+      btnElement.querySelector('.vote-count').textContent = baseVotes + upvotes[id];
+      
+      // Active styling
+      btnElement.classList.add('text-orange-400', 'bg-orange-500/10');
+      btnElement.classList.remove('opacity-50', 'text-orange-500');
+    };
+
+
+    // 3. FEATURED CATEGORIES
+    const featuredCategories = [
+      {
+        id: "PRO", title: "Professionalism",
+        reasons: [
+          { id: 'p1', text: "Always delivers scalable, production-ready solutions before the deadline.", base: 450 },
+          { id: 'p2', text: "Mentors juniors with infinite patience and clarity.", base: 382 },
+          { id: 'p3', text: "Can single-handedly architect a system that saves millions.", base: 924 }
+        ]
+      },
+      {
+        id: "KND", title: "Kindness",
+        reasons: [
+          { id: 'k1', text: "Remembers everyone's birthday and favorite coffee order.", base: 512 },
+          { id: 'k2', text: "Will stay up late to help a friend fix a bug.", base: 640 },
+          { id: 'k3', text: "Creates an inclusive environment wherever he goes.", base: 890 }
+        ]
+      },
+      {
+        id: "SKL", title: "Skill",
+        reasons: [
+          { id: 's1', text: "Writes code that reads like poetry.", base: 1024 },
+          { id: 's2', text: "Can debug deeply nested race conditions in his sleep.", base: 855 },
+          { id: 's3', text: "Mastered full-stack development. Every single stack.", base: 2130 }
+        ]
+      }
+    ];
+
+    const featGrid = document.getElementById('featured-categories');
+    featuredCategories.forEach(cat => {
+      const col = document.createElement('div');
+      col.className = "flex flex-col animate-fade-in";
+      
+      let html = `
+        <h3 class="text-[10px] font-bold uppercase tracking-[0.2em] text-white mb-5 bg-white/5 inline-block py-2 px-3 border border-white/10 w-fit">
+          [ ${cat.title} ]
+        </h3>
+        <div class="flex flex-col gap-4">
+      `;
+      
+      cat.reasons.forEach((r, idx) => {
+        html += `
+          <div class="p-5 border border-white/20 bg-white/5 hover:bg-neutral-900 transition-colors flex flex-col justify-between group h-full">
+            <div class="flex items-start justify-between mb-4 border-b border-white/10 pb-3">
+              <span class="text-white/40 font-mono text-[10px] uppercase tracking-widest">
+                ${cat.id}_${String(idx + 1).padStart(2,'0')}
+              </span>
+              <button onclick="handleUpvote('${r.id}', this)" data-base-votes="${r.base}" class="px-2 py-1 rounded flex items-center gap-1.5 text-xs font-mono text-orange-500 opacity-80 hover:text-white hover:opacity-100 hover:bg-white/10 transition-colors cursor-pointer">
+                <i data-lucide="move-up" class="w-3 h-3"></i>
+                <span class="vote-count">${r.base}</span>
+              </button>
+            </div>
+            <p class="text-sm text-white/90 leading-relaxed font-medium">${r.text}</p>
+          </div>
+        `;
+      });
+      
+      html += `</div>`;
+      col.innerHTML = html;
+      featGrid.appendChild(col);
+    });
+
+
+    // 4. TESTIMONIALS ENGINE
+    const tList = document.getElementById('testimonials-list');
+    const initialTestimonials = [
+      { id: 1, author: "Ahmad R.", content: "Hassan Bhai didn't just review my PR; he reviewed my approach to life. 10/10." },
+      { id: 2, author: "Sarah K.", content: "I once saw him resolve a merge conflict simply by looking at the screen." },
+      { id: 3, author: "Omar B.", content: "The epitome of excellence. The 1,000,000 number is honestly an understatement." }
+    ];
+
+    function renderTestimonial(t) {
+      const el = document.createElement('div');
+      el.className = "p-6 border border-white/20 bg-white/5 flex gap-5 hover:bg-neutral-900 transition-colors animate-fade-in";
+      el.innerHTML = `
+        <i data-lucide="quote" class="w-6 h-6 text-orange-500/30 flex-shrink-0 mt-1"></i>
+        <div class="flex-1">
+          <p class="text-[15px] text-white/90 leading-relaxed italic mb-4">"${t.content}"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-4 h-[1px] bg-white/20"></div>
+            <div class="text-[10px] font-mono uppercase tracking-[0.2em] text-orange-500">${t.author}</div>
+          </div>
+        </div>
+      `;
+      tList.prepend(el);
+      // Only recreate icons inside this new element for perf
+      lucide.createIcons({ root: el });
+    }
+
+    // Load initial backwards so newest is on top
+    [...initialTestimonials].reverse().forEach(renderTestimonial);
+
+    document.getElementById('testimonial-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const authorEl = document.getElementById('t-author');
+      const contentEl = document.getElementById('t-content');
+      
+      renderTestimonial({ 
+        id: Date.now(), 
+        author: authorEl.value, 
+        content: contentEl.value 
+      });
+      
+      // Reset form
+      authorEl.value = '';
+      contentEl.value = '';
+    });
+
+
+    // 5. ENDLESS ARCHIVE GENERATOR
+    const prefixes = ["Unmatched", "Infinite", "Spectacular", "Legendary", "God-like", "Supreme", "Flawless", "Astounding", "Mind-bending", "Incredible", "Exceptional", "Unbelievable", "Immaculate", "Transcendent", "Elite"];
+    const nouns = ["swag", "coding skills", "wisdom", "charisma", "aura", "debugging speed", "friendship", "leadership", "patience", "generosity", "vision", "brilliance", "taste", "intellect", "loyalty"];
+    const actions = ["saving the day", "writing flawless code", "helping others", "being a true bro", "solving impossible problems", "inspiring millions", "never giving up", "staying humble", "mastering the universe", "radiating positive energy", "dropping knowledge", "carrying the team"];
+    
+    // Procedurally generated text
+    function getReason(id) {
+      if (id === 1) return "He literally radiates pure success and positive vibes everywhere he goes.";
+      if (id === 2) return "His code compiles on the first try. Every. Single. Time.";
+      if (id === 3) return "He is the absolute definition of a real one.";
+      if (id === 69) return "Extraordinary humor and unmatched comedic timing.";
+      if (id === 404) return "Cannot find a single flaw in his character.";
+      if (id === 999999) return "Almost at a million, but words still can't describe his greatness.";
+      if (id === 1000000) return "Because he is Hassan Bhai. There is no other reason needed.";
+      
+      // Deterministic randomness
+      const s1 = (id * 13) % prefixes.length;
+      const s2 = (id * 97) % nouns.length;
+      const s3 = (id * 103) % actions.length;
+      
+      return `${prefixes[s1]} ${nouns[s2]} when it comes to ${actions[s3]}.`;
+    }
+
+    const archiveGrid = document.getElementById('archive-grid');
+    const loader = document.getElementById('loader');
+    let displayedCount = 0;
+    const TOTAL_REASONS = 1000000;
+
+    function renderMoreRecords() {
+      const batchSize = 12;
+      const fragment = document.createDocumentFragment();
+      
+      for (let i = 0; i < batchSize; i++) {
+        if (displayedCount >= TOTAL_REASONS) break;
+        displayedCount++;
+        
+        const id = displayedCount;
+        const initialVotes = (id * 7) % 25; // Deterministic random votes
+        
+        const el = document.createElement('div');
+        el.className = "p-5 border border-white/10 bg-white/[0.02] hover:bg-white/10 transition-colors group flex flex-col justify-between min-h-[160px] animate-fade-in";
+        el.innerHTML = `
+          <div class="flex items-center justify-between mb-4 border-b border-white/10 pb-2">
+            <span class="text-white/30 font-mono font-bold text-[10px] uppercase tracking-widest">
+              REC_${id.toString().padStart(6, '0')}
+            </span>
+            <button onclick="handleUpvote('arch_${id}', this)" data-base-votes="${initialVotes}" class="px-2 py-1 rounded flex items-center gap-1.5 text-xs font-mono text-orange-500 opacity-50 group-hover:opacity-100 hover:text-white hover:bg-white/10 transition-all cursor-pointer">
+              <i data-lucide="move-up" class="w-3 h-3"></i>
+              <span class="vote-count">${initialVotes}</span>
+            </button>
+          </div>
+          <p class="text-xs text-white/80 leading-relaxed font-medium">
+            ${getReason(id)}
+          </p>
+        `;
+        fragment.appendChild(el);
+      }
+      
+      archiveGrid.appendChild(fragment);
+      lucide.createIcons();
+    }
+
+    // Intersection Observer for Infinite Scroll
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        // Simulate network delay for effect
+        setTimeout(() => {
+          renderMoreRecords();
+          if (displayedCount >= TOTAL_REASONS) {
+            loader.style.display = 'none';
+            observer.disconnect();
+          }
+        }, 300);
+      }
+    }, { rootMargin: "400px" });
+
+    // Initial load and observe trigger
+    renderMoreRecords();
+    observer.observe(loader);
+
+    // Initial Refresh
+    lucide.createIcons();
+  </script>
+</body>
+</html>
