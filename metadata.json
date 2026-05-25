@@ -1,0 +1,6 @@
+{
+  "name": "Hassan Bhai Appreciation",
+  "description": "1,000,000 undeniable reasons why Hassan bhai is the best.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
